@@ -4,7 +4,9 @@ import Image from "next/image";
 import { useState } from "react";
 
 export default function Home() {
-  const [uploadedImage, setUploadedImage] = useState(null);
+  const [uploadedImage, setUploadedImage] = useState(
+    "/placeholder-profile.jpg"
+  );
 
   const handleImageUpload = async (event: any) => {
     const file = event?.target.files[0];
