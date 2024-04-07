@@ -38,7 +38,7 @@ export default function Home() {
             />
           </div>
         ) : (
-          <div className="box sm:size-64 w-full max-w-[200px] h-[200px]" />
+          <div className="box sm:size-64 w-full h-[200px]" />
         )}
 
         <label
