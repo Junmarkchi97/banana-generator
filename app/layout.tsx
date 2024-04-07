@@ -4,11 +4,12 @@ import "./globals.css";
 // import Image from "next/image";
 import Header from "./component/header";
 import Image from "next/image";
+import Footer from "./component/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Banana Meme Generator",
+  title: "Banana Generator",
   description: "An app for generating banana meme",
 };
 
@@ -36,6 +37,7 @@ export default function RootLayout({
         </div> */}
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
