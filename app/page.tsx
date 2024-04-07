@@ -24,10 +24,12 @@ export default function Home() {
         />
       </div>
 
-      <section className="z-20 grid place-items-center gap-5">
-        <h1 className="font-bold text-4xl">BANANA FRAME</h1>
+      <section className="z-20 p-5 grid w-full place-items-center gap-5">
+        <h1 className="font-bold text-center text-2xl lg:text-4xl">
+          BANANA FRAME
+        </h1>
         {uploadedImage ? (
-          <div className="relative h-[250px] box w-[250px] overflow-hidden p-2">
+          <div className="relative w-full box h-[200px] md:size-64 overflow-hidden p-2">
             <Image
               className="rounded-md absolute object-cover p-2"
               src={uploadedImage}
@@ -36,7 +38,7 @@ export default function Home() {
             />
           </div>
         ) : (
-          <div className="box h-[250px] w-[250px]" />
+          <div className="box sm:size-64 w-full max-w-[200px] h-[200px]" />
         )}
 
         <label
