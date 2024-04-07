@@ -16,16 +16,6 @@ export default function Home() {
 
   return (
     <div className="grid place-items-center gap-5">
-      <div className="absolute select-none pointer-events-none z-0 top-0 transition-all left-0 blob-wrap x h-[100px] w-[200px]">
-        <Image
-          id="banana"
-          src={"/banana.png"}
-          fill
-          alt={`Bouncing Image`}
-          className="absolute blob y transition-all"
-        />
-      </div>
-
       <section className="z-20 mt-10 p-5 grid w-full place-items-center gap-5">
         {uploadedImage ? (
           <div className="relative box size-52 sm:size-64 overflow-hidden p-2">
