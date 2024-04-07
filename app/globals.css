@@ -75,7 +75,7 @@
 body {
   background-image: url("../public/background.svg");
   background-position: center;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .box {

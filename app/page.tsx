@@ -14,7 +14,7 @@ export default function Home() {
 
   return (
     <div className="grid place-items-center gap-5">
-      <div className="absolute z-0 top-0 transition-all left-0 blob-wrap x h-[100px] w-[200px]">
+      <div className="absolute select-none pointer-events-none z-0 top-0 transition-all left-0 blob-wrap x h-[100px] w-[200px]">
         <Image
           id="banana"
           src={"/banana.png"}
