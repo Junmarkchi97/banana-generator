@@ -3,31 +3,127 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --width: 100%;
+  --x-speed: 13s;
+  --y-speed: 7s;
+  --transition-speed: 2.2s;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.banana {
+  animation: rotate 10s linear infinite;
+}
+
+.blob {
+  width: var(--width);
+  height: var(--width);
+  background: transparent;
+  transition: border-radius var(--transition-speed) linear;
+}
+
+.blob-2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.blob-2 .blob {
+  background: #b0bec5;
+}
+
+.x {
+  animation: x var(--x-speed) linear infinite alternate;
+}
+
+.x2 {
+  animation: x2 var(--x-speed) linear infinite alternate;
+}
+
+.y {
+  animation: y var(--y-speed) linear infinite alternate;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes x {
+  100% {
+    transform: translateX(calc(100vw - var(--width)));
+  }
+}
+@keyframes x2 {
+  100% {
+    transform: translateX(calc(-100vw + var(--width)));
+  }
+}
+
+@keyframes y {
+  100% {
+    transform: translateY(calc(100vh - var(--width)));
+    -webkit-transform: translateY(calc(100vh - var(--width)));
+    -moz-transform: translateY(calc(100vh - var(--width)));
+    -ms-transform: translateY(calc(100vh - var(--width)));
+    -o-transform: translateY(calc(100vh - var(--width)));
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-image: url("../public/background.png");
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.box {
+  background-image: repeating-linear-gradient(
+      0deg,
+      #333333,
+      #333333 4px,
+      transparent 4px,
+      transparent 8px,
+      #333333 8px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      #333333,
+      #333333 4px,
+      transparent 4px,
+      transparent 8px,
+      #333333 8px
+    ),
+    repeating-linear-gradient(
+      180deg,
+      #333333,
+      #333333 4px,
+      transparent 4px,
+      transparent 8px,
+      #333333 8px
+    ),
+    repeating-linear-gradient(
+      270deg,
+      #333333,
+      #333333 4px,
+      transparent 4px,
+      transparent 8px,
+      #333333 8px
+    );
+  background-size: 2px calc(100% + 8px), calc(100% + 8px) 2px,
+    2px calc(100% + 8px), calc(100% + 8px) 2px;
+  background-position: 0 0, 0 0, 100% 0, 0 100%;
+  background-repeat: no-repeat;
+  animation: borderAnimation 0.8s infinite linear;
+}
+
+@keyframes borderAnimation {
+  from {
+    background-position: 0 0, -8px 0, 100% -8px, 0 100%;
+  }
+  to {
+    background-position: 0 -8px, 0 0, 100% 0, -8px 100%;
   }
 }
