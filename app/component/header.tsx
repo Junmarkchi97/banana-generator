@@ -23,7 +23,7 @@ function Header() {
         <Link href={"/"}>Frame Generator</Link>
       </ul>
       <ul>
-        <Link href={"/meme-list"}>Meme List</Link>
+        <Link href={"/memes"}>Memes</Link>
       </ul>
       <ul>
         <Link href={"/leaderboard"}>Banana Gang</Link>

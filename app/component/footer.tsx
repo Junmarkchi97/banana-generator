@@ -7,7 +7,7 @@ function Footer() {
       className="absolute text-center bottom-5 text-sm"
       href={"https://twitter.com/TheViralBanana"}
     >
-      @TheViralBanana | Community Created
+      @TheViralBanana
     </Link>
   );
 }

@@ -1,8 +1,8 @@
 import React from "react";
 import ComingSoon from "../component/coming-soon";
 
-function MeleList() {
+function Memes() {
   return <ComingSoon />;
 }
 
-export default MeleList;
+export default Memes;
