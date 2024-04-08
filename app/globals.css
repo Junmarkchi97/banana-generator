@@ -126,3 +126,25 @@ body {
     background-position: 0 -8px, 0 0, 100% 0, -8px 100%;
   }
 }
+
+.scrollbar::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  padding-right: 10px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: #333333;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}

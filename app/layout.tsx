@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} text-primary1  relative bg-primary2 font-sans h-screen grid place-items-center`}
+        className={`${inter.className} flex flex-col justify-center text-primary1 items-center relative bg-primary2 font-sans h-screen`}
       >
         <GoogleAnalytics />
         <div className="absolute select-none pointer-events-none -z-[1] top-0 transition-all left-0 blob-wrap x h-[100px] w-[200px]">
@@ -34,9 +34,6 @@ export default function RootLayout({
             className="absolute blob y transition-all"
           />
         </div>
-        {/* <div className="absolute h-7 w-10 top-0">
-          <Image alt="banana small" fill src={"/banana-small.png"} />
-        </div> */}
         <Header />
         {children}
         <Footer />

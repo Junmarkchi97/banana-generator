@@ -1,3 +1,4 @@
+import React from "react";
 import ComingSoon from "../component/coming-soon";
 
 function LeaderBoard() {

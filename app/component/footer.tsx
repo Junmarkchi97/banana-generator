@@ -4,7 +4,7 @@ import React from "react";
 function Footer() {
   return (
     <Link
-      className="absolute text-center bottom-5 text-sm"
+      className="text-center py-5 text-sm"
       href={"https://twitter.com/TheViralBanana"}
     >
       @TheViralBanana

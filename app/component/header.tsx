@@ -18,7 +18,7 @@ function Header() {
   };
 
   return (
-    <header className="hidden md:flex font-semibold z-10 text-lg absolute top-10 items-center gap-10">
+    <header className="hidden md:flex font-semibold w-full z-10 text-lg absolute justify-center top-10 items-center gap-10">
       <ul>
         <Link href={"/"}>Frame Generator</Link>
       </ul>
@@ -31,7 +31,7 @@ function Header() {
       <audio ref={audioRef} id="myAudio" src="ilovebanana.mp3" loop></audio>
       <button
         type="button"
-        className="absolute -right-20"
+        className="absolute right-40"
         onClick={togglePlayPause}
       >
         <Image
