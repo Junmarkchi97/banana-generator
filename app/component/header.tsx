@@ -28,7 +28,7 @@ function Header() {
       <ul>
         <Link href={"/leaderboard"}>Banana Gang</Link>
       </ul>
-      <audio ref={audioRef} id="myAudio" src="banana-song.mp3" loop></audio>
+      <audio ref={audioRef} id="myAudio" src="ilovebanana.mp3" loop></audio>
       <button
         type="button"
         className="absolute -right-20"

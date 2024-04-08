@@ -25,7 +25,7 @@ export default function RootLayout({
         className={`${inter.className} text-primary1  relative bg-primary2 font-sans h-screen grid place-items-center`}
       >
         <GoogleAnalytics />
-        <div className="absolute select-none pointer-events-none z-0 top-0 transition-all left-0 blob-wrap x h-[100px] w-[200px]">
+        <div className="absolute select-none pointer-events-none -z-[1] top-0 transition-all left-0 blob-wrap x h-[100px] w-[200px]">
           <Image
             id="banana"
             src={"/banana.png"}
